@@ -34,6 +34,9 @@ function Home() {
 
   return (
     <>
+      <h2 className="d-flex flex-wrap justify-content-center p-2">
+        Popular Movies
+      </h2>
       <CardList movies={data} />
     </>
   );
