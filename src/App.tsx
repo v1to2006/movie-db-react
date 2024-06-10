@@ -1,8 +1,10 @@
-import NavigationBar from "./components/Navbar";
+import NavigationBar from "./components/NavigationBar";
 import { z } from "zod";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Search from "./pages/Search";
+import Footer from "./components/Footer";
+import { Container } from "react-bootstrap";
 
 const responseCardType = z.object({
   id: z.number(),
@@ -35,6 +37,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/search/:searchQuery" element={<Search />} />
         </Routes>
+        <Footer />
       </Router>
     </>
   );

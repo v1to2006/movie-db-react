@@ -8,7 +8,6 @@ function Search() {
   const [data, setData] = useState<MovieCardProps[]>([]);
   const navigate = useNavigate();
   let { searchQuery } = useParams();
-  console.log(searchQuery);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -39,7 +38,7 @@ function Search() {
   return (
     <>
       <h2 className="d-flex flex-wrap justify-content-center p-2">
-        "{searchQuery}" Movies
+        "{searchQuery}" movies
       </h2>
       <CardList movies={data} />
     </>

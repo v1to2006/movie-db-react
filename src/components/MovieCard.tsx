@@ -9,7 +9,12 @@ export interface MovieCardProps {
 
 const MovieCard = ({ id, title, releaseDate, imageUrl }: MovieCardProps) => {
   return (
-    <Card key={id} style={{ width: "14rem" }} className="m-1">
+    <Card
+      key={id}
+      onClick={() => console.log(id)}
+      style={{ width: "14rem" }}
+      className="m-1"
+    >
       <Card.Img
         variant="top"
         src={

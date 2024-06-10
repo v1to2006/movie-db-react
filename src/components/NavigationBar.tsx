@@ -24,7 +24,10 @@ const NavigationBar = () => {
       data-bs-theme="dark"
     >
       <Container fluid="md">
-        <Navbar.Brand href="/">Home</Navbar.Brand>
+        <Navbar.Brand href="/">
+          <img src="../public/movie-icon.svg" width={35} height={35} className="m-2" />
+          Home
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Form
