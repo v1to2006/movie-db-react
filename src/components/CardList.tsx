@@ -1,5 +1,7 @@
 import MovieCard, { MovieCardProps } from "./MovieCard";
 import { Container } from "react-bootstrap";
+import ListPagination from "./ListPagination";
+import { useInfiniteQuery } from "react-query";
 
 const CardList = ({ movies }: { movies: MovieCardProps[] }) => {
   return (
@@ -18,6 +20,9 @@ const CardList = ({ movies }: { movies: MovieCardProps[] }) => {
         ) : (
           <strong>Movie not found</strong>
         )}
+        <div className="mt-5 mb-5">
+          <ListPagination />
+        </div>
       </div>
     </Container>
   );

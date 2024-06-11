@@ -3,8 +3,8 @@ import { z } from "zod";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Search from "./pages/Search";
+import MovieDetails from "./pages/MovieDetails";
 import Footer from "./components/Footer";
-import { Container } from "react-bootstrap";
 
 const responseCardType = z.object({
   id: z.number(),
@@ -36,6 +36,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/search/:searchQuery" element={<Search />} />
+          <Route path="/movie/:movieId" element={<MovieDetails />} />
         </Routes>
         <Footer />
       </Router>

@@ -16,6 +16,8 @@ const NavigationBar = () => {
       navigate(`/search/${formElements.searchInputField.value}`);
   }
 
+  <a href="/govno"><span>asdas</span></a>
+
   return (
     <Navbar
       expand="lg"
@@ -25,7 +27,12 @@ const NavigationBar = () => {
     >
       <Container fluid="md">
         <Navbar.Brand href="/">
-          <img src="../public/movie-icon.svg" width={35} height={35} className="m-2" />
+          <img
+            src="/movie-icon.svg"
+            width={35}
+            height={35}
+            className="m-2"
+          />
           Home
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />

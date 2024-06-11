@@ -5,11 +5,12 @@ import { options, responseType } from "../App";
 
 function Home() {
   const [data, setData] = useState<MovieCardProps[]>([]);
+  const [pageNumber, setPageNumber] = useState(1);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchData = async (pageNumber: number) => {
       const fetchedMovies = await fetch(
-        "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1",
+        `https://api.themoviedb.org/3/movie/popular?language=en-US&page=${pageNumber}`,
         options
       )
         .then((response) => response.json())
@@ -29,7 +30,7 @@ function Home() {
         );
     };
 
-    fetchData().catch(console.error);
+    fetchData(pageNumber).catch(console.error);
   }, []);
 
   return (

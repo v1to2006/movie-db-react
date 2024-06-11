@@ -1,4 +1,5 @@
 import { Card } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 export interface MovieCardProps {
   id: number;
@@ -8,10 +9,16 @@ export interface MovieCardProps {
 }
 
 const MovieCard = ({ id, title, releaseDate, imageUrl }: MovieCardProps) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/movie/${id}`)
+  }
+
   return (
     <Card
       key={id}
-      onClick={() => console.log(id)}
+      onClick={handleClick}
       style={{ width: "14rem" }}
       className="m-1"
     >
